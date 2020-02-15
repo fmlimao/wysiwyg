@@ -41,17 +41,19 @@
                     <select
                         class="bg-white hover:bg-gray-200 border border-gray-300 text-gray-700 text-sm px-2 h-8 rounded-l"
                         onchange="execCmd('fontName', this.value)">
+                        <option value="">- Family -</option>
                         <option value="Arial">Arial</option>
-                        <option value="Comic Sans MS">Comic Sans MS</option>
                         <option value="Courier">Courier</option>
-                        <option value="Gergoria">Gergoria</option>
-                        <option value="Tahoma">Tahoma</option>
-                        <option value="Times New Roman">Times New Roman</option>
+                        <!-- <option value="Comic Sans MS">Comic Sans MS</option> -->
+                        <!-- <option value="Georgia">Georgia</option> -->
+                        <!-- <option value="Tahoma">Tahoma</option> -->
+                        <!-- <option value="Times New Roman">Times New Roman</option> -->
                     </select>
 
                     <select
                         class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 text-sm px-2 h-8"
                         onchange="execCmd('fontSize', this.value)">
+                        <option value="">- Size -</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -64,6 +66,7 @@
                     <select
                         class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 border-l-0 text-gray-700 text-sm px-2 h-8"
                         onchange="execCmd('formatBlock', this.value)">
+                        <option value="">- Format -</option>
                         <option value="H1">H1</option>
                         <option value="H2">H2</option>
                         <option value="H3">H3</option>
@@ -192,6 +195,7 @@
         function execCmd(command, value) {
             console.log('execCmd', command, value);
             if (typeof value == 'undefined') value = null;
+            if (value == '') value = null;
             richTextField.document.execCommand(command, false, value);
         }
 
