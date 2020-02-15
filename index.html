@@ -10,19 +10,27 @@
     <title>WYSIWYG</title>
 </head>
 
-<body onload="enableEditMode();" class="bg-blue-700 py-16">
+<body onload="enableEditMode();" class="bg-blue-500 py-16">
 
     <h1 class="text-white text-center mb-8 text-6xl font-bold tracking-widest">WYSIWYG</h1>
 
-    <div class="bg-gray-100 border border-gray-300 mx-auto p-4 rounded-md shadow-md" style="width: 590px;">
+    <div class="bg-gray-100 border border-gray-300 mx-auto p-4 rounded-md shadow-md" style="width: 556px;">
 
         <div>
 
             <div class="mb-2 clearfix">
 
                 <div class="inline-flex float-left mr-2">
-                    <select class="bg-white hover:bg-gray-200 border border-gray-300 text-gray-700 px-4 h-8 rounded-l"
-                        onchange="execCmd('fontName', this.value)">
+                    <select class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        text-gray-700
+                        text-sm
+                        px-2
+                        h-8
+                        rounded-l" onchange="execCmd('fontName', this.value)">
                         <option value="Arial">Arial</option>
                         <option value="Comic Sans MS">Comic Sans MS</option>
                         <option value="Courier">Courier</option>
@@ -31,8 +39,16 @@
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
 
-                    <select class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8"
-                        onchange="execCmd('fontSize', this.value)">
+                    <select class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-2
+                        h-8" onchange="execCmd('fontSize', this.value)">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -42,8 +58,17 @@
                         <option value="7">7</option>
                     </select>
 
-                    <select class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8"
-                        onchange="execCmd('formatBlock', this.value)">
+                    <select class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-2
+                        h-8" onchange="execCmd('formatBlock', this.value)">
                         <option value="H1">H1</option>
                         <option value="H2">H2</option>
                         <option value="H3">H3</option>
@@ -52,25 +77,56 @@
                         <option value="H6">H6</option>
                     </select>
 
-                    <input type="color"
-                        class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-1 h-8 rounded-r"
-                        onchange="execCmd('foreColor', this.value)">
+                    <input type="color" class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        px-1
+                        h-8
+                        rounded-r" onchange="execCmd('foreColor', this.value)">
                 </div>
 
-                <div class="inline-flex float-left mr-2">
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 text-gray-700 px-4 h-8 rounded-l"
-                        onclick="execCmd('createLink', prompt('Enter a URL', 'http://'));">
+                <div class="inline-flex float-left">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8
+                        rounded-l" onclick="execCmd('createLink', prompt('Enter a URL', 'http://'));">
                         <span class="fa fa-link"></span>
                     </button>
 
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8"
-                        onclick="execCmd('unlink');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8" onclick="execCmd('unlink');">
                         <span class="fa fa-unlink"></span>
                     </button>
 
-                    <button
-                        class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8 rounded-r"
-                        onclick="execCmd('insertImage', prompt('Enter the image URL', ''));">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8
+                        rounded-r" onclick="execCmd('insertImage', prompt('Enter the image URL', ''));">
                         <span class="fa fa-file-image-o"></span>
                     </button>
                 </div>
@@ -80,65 +136,154 @@
             <div class="mb-2 clearfix">
 
                 <div class="inline-flex float-left mr-2">
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 text-gray-700 px-4 h-8 rounded-l"
-                        onclick="execCmd('bold');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8
+                        rounded-l" onclick="execCmd('bold');">
                         <span class="fa fa-bold"></span>
                     </button>
 
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8"
-                        onclick="execCmd('italic');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8" onclick="execCmd('italic');">
                         <span class="fa fa-italic"></span>
                     </button>
 
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8"
-                        onclick="execCmd('underline');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8" onclick="execCmd('underline');">
                         <span class="fa fa-underline"></span>
                     </button>
 
-                    <button
-                        class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8 rounded-r"
-                        onclick="execCmd('strikeThrough');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8
+                        rounded-r" onclick="execCmd('strikeThrough');">
                         <span class="fa fa-strikethrough"></span>
                     </button>
 
                 </div>
 
                 <div class="inline-flex float-left mr-2">
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 text-gray-700 px-4 h-8 rounded-l"
-                        onclick="execCmd('justifyLeft');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8
+                        rounded-l" onclick="execCmd('justifyLeft');">
                         <span class="fa fa-align-left"></span>
                     </button>
 
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8"
-                        onclick="execCmd('justifyCenter');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8" onclick="execCmd('justifyCenter');">
                         <span class="fa fa-align-center"></span>
                     </button>
 
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8"
-                        onclick="execCmd('justifyRight');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8" onclick="execCmd('justifyRight');">
                         <span class="fa fa-align-right"></span>
                     </button>
 
-                    <button
-                        class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8 rounded-r"
-                        onclick="execCmd('justifyFull');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8
+                        rounded-r" onclick="execCmd('justifyFull');">
                         <span class="fa fa-align-justify"></span>
                     </button>
                 </div>
 
-                <div class="inline-flex float-left mr-2">
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 text-gray-700 px-4 h-8 rounded-l"
-                        onclick="execCmd('undo');">
+                <div class="inline-flex float-left">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8
+                        rounded-l" onclick="execCmd('undo');">
                         <span class="fa fa-undo"></span>
                     </button>
 
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8"
-                        onclick="execCmd('redo');">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8" onclick="execCmd('redo');">
                         <span class="fa fa-repeat"></span>
                     </button>
 
-                    <button class="bg-white hover:bg-gray-200 border border-gray-300 border-l-0 text-gray-700 px-4 h-8 rounded-r"
-                        onclick="toggleSource();">
+                    <button class="
+                        bg-white
+                        hover:bg-gray-200
+                        border
+                        border-gray-300
+                        border-l-0
+                        text-gray-700
+                        text-sm
+                        px-4
+                        h-8
+                        rounded-r" onclick="toggleSource();">
                         <span class="fa fa-code"></span>
                     </button>
                 </div>
